@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Otodeal</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fefaf1; /* Cream */
+            color: #001f3f; /* Navy */
+        }
+
+        /* Header Section */
+        .contact-header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('car.jpg') center/cover no-repeat;
+            color: #fefaf1; /* Cream */
+        }
+
+        .contact-header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-header p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Contact Information Section */
+        .contact-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 2rem 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            background-color: #001f3f; /* Navy */
+            color: #fefaf1; /* Cream */
+            padding: 1.5rem;
+            border-radius: 8px;
+            width: 300px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        .contact-info i {
+            margin-right: 0.5rem;
+            color: #ff4b5c; /* Red Accent */
+        }
+
+        /* Message Form Section */
+        .contact-form {
+            background-color: #fefaf1; /* Cream */
+            padding: 2rem;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #001f3f;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #001f3f; /* Navy */
+            color: #fefaf1; /* Cream */
+            padding: 0.8rem;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff4b5c; /* Red Accent */
+        }
+
+        /* Map Section */
+        .map-container {
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        .map-container iframe {
+            border: 0;
+            width: 90%;
+            height: 300px;
+            border-radius: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info, .contact-form {
+                width: 90%;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contact Header Section -->
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Reach out to us for any questions or assistance.</p>
+    </div>
+
+    <!-- Contact Details & Form Section -->
+    <div class="contact-container">
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h3>Our Details</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Fort, Mumbai - 400 001</p>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> support@otodeal.com</p>
+            <p><i class="fas fa-clock"></i> Mon - Sat: 9 AM - 6 PM</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="tel" id="contactNumber" placeholder="Your Contact Number" required>
+                <input type="email" id="email" placeholder="Your Email Address" required>
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="button" onclick="sendMessage()">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-container">
+        <h3>Find Us Here</h3>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609985837!2d72.74109911835938!3d19.08252232419764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ceff08354f6d%3A0x62adfe48b63272a5!2sFort%2C%20Mumbai%2C%20Maharashtra%20400001!5e0!3m2!1sen!2sin!4v1604464965057!5m2!1sen!2sin"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"></iframe>
+    </div>
+
+    <script>
+        // JavaScript for form validation
+        function sendMessage() {
+            const name = document.getElementById('name').value.trim();
+            const contactNumber = document.getElementById('contactNumber').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !contactNumber || !email || !message) {
+                alert('Please fill out all fields before submitting.');
+                return;
+            }
+
+            if (!/^\d{10}$/.test(contactNumber)) {
+                alert('Please enter a valid 10-digit contact number.');
+                return;
+            }
+
+            alert('Thank you, ' + name + '! Your message has been sent.');
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+</body>
+</html>

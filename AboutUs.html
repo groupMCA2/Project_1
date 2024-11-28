@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otodeal - About Us</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fefaf1; /* Cream */
+            color: #001f3f; /* Navy */
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #001f3f; /* Navy */
+            color: #fefaf1; /* Cream */
+            padding: 1rem 2rem;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar nav a {
+            text-decoration: none;
+            color: #fefaf1; /* Cream */
+            margin: 0 1rem;
+            font-size: 1rem;
+        }
+
+        .navbar .contact-btn {
+            background-color: #fefaf1; /* Cream */
+            color: #001f3f; /* Navy */
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .navbar .contact-btn:hover {
+            background-color: #001f3f;
+            color: #fefaf1;
+            border: 2px solid #fefaf1;
+        }
+
+        /* About Section */
+        .about-section {
+            background: url('car.jpg') center/cover no-repeat; /* Background image */
+            position: relative;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fefaf1; /* Cream */
+        }
+
+        .about-section .about-overlay {
+            background-color: rgba(0, 31, 63, 0.8); /* Navy overlay */
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .about-section h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .about-section p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Offer Section */
+        .offer-section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .offer-section h2 {
+            color: #001f3f; /* Navy */
+            font-size: 2rem;
+        }
+
+        .offer-section p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #001f3f; /* Navy */
+            color: #fefaf1; /* Cream */
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">OTODEAL</div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#pages">Pages</a>
+            </nav>
+            <button class="contact-btn" onclick="contactUs()">Contact Us</button>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="about-overlay">
+            <h1>ABOUT US</h1>
+        </div>
+    </section>
+
+    <section class="offer-section">
+        <h2>Come And See What We Offer</h2>
+        <p>
+            At Otodeal, we strive to provide an exceptional car-buying experience by offering a wide range of high-quality vehicles to meet every budget and preference. Established in 2015, we are committed to making car ownership simple, transparent, and enjoyable.
+        </p>
+        <p>
+            Our philosophy is built on trust and transparency. We believe in delivering vehicles that meet the highest standards while ensuring our customers feel confident in every decision they make.
+        </p>
+        <p>
+            From browsing your dream car online to doorstep delivery, Otodeal offers a seamless shopping experience. Our services include trade-ins, affordable financing options, and certified quality checks.
+        </p>
+        <p>
+            With over a decade of expertise in the automotive industry, Otodeal has served 10,000+ happy customers. We are proud to be an authorized dealer for some of the world’s leading car brands.
+        </p>
+        <p>
+            Our passionate team of automotive experts is dedicated to helping you find the perfect vehicle. From sales advisors to customer care representatives, we’re here to ensure your experience is smooth and satisfying.
+        </p>
+        <p>
+            Why Otodeal? We offer a wide selection of vehicles, transparent pricing, and personalized guidance to make your car-buying journey stress-free.
+        </p>
+        <p>
+            "Otodeal made buying my first car so easy! Their team was incredibly helpful, and the car was delivered right to my doorstep!" -John D.
+        </p>
+        <p>
+            Based in New York City, we deliver vehicles to customers across the United States, ensuring prompt and safe delivery.
+        </p>
+        <p>
+            At Otodeal, we’re committed to promoting sustainability by offering a range of electric and hybrid vehicles to reduce environmental impact.
+        </p>
+        <p>
+            Ready to find your perfect car? Explore our inventory or contact us for more details!
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2024 Otodeal. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for "Contact Us" button
+        function contactUs() {
+            alert("Thank you for reaching out! Please email us at contact@otodeal.com.");
+        }
+    </script>
+</body>
+</html>
